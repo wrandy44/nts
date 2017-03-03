@@ -1,0 +1,35 @@
+#
+#
+#
+
+.chipsets:
+4512 chip
+input a
+input b
+input c
+input d
+input e
+input f
+input g
+input h
+input i
+input j
+input k
+input l
+input m
+output s
+.links:
+a:1 chip:1
+b:1 chip:2
+c:1 chip:3
+d:1 chip:4
+e:1 chip:5
+f:1 chip:6
+g:1 chip:7
+h:1 chip:9
+i:1 chip:10
+j:1 chip:11
+k:1 chip:12
+l:1 chip:13
+m:1 chip:15
+s:1 chip:14

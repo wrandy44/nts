@@ -1,0 +1,85 @@
+#
+#  Commentaire
+#
+> *Fake file*
+:azda# no ext
+:asze.nts# ext but no file
+:nor.nts# file but no arg
+:testU/trash/1.nts a=0 b=1	# double a on file
+:testU/trash/2.nts		# .trash: section
+:testU/trash/3.nts a=3 b=0	# value of a = 3
+:testU/trash/4.nts a=-1 b=0	# value of a = -1
+:testU/trash/5.nts a=0		# missing b
+:testU/trash/9.nts a=0 b=0	# link right no pin
+:testU/trash/7.nts a=0 b=0	# links not declared rvalue
+:testU/trash/12.nts a=0 b=0	# Component not registereed :228  
+> *Don't care of this 4 :"
+:testU/trash/8.nts a=0 b=0	# link left no pin
+:testU/trash/6.nts a=0 b=0	# links not declared lvalue
+:testU/trash/10.nts a=0 b=0	# link left no var
+:testU/trash/11.nts a=0 b=0	# link right no var
+
+#
+#  Need test no link, no chipset, gate:45 a:-1 
+#
+#
+
+>End *Fake File*
+>Test Simulate and display
+>4001
+exit\n:testU/4001.nts a=0 b=0 b1=0
+exit\n:testU/4001.nts a=0 b=0 b1=1
+exit\n:testU/4001.nts a=0 b=1 b1=0
+exit\n:testU/4001.nts a=1 b=0 b1=0
+exit\n:testU/4001.nts a=1 b=1 b1=0
+exit\n:testU/4001.nts a=0 b=1 b1=1
+exit\n:testU/4001.nts a=1 b=1 b1=1
+>4008
+exit\n:testU/4008.nts a0=0 a1=0 a2=0 a3=0 b0=0 b1=0 b2=0 b3=0 cin=0 for14=0
+>4069
+exit\n:testU/4069.nts i0=0 i1=0 i2=0 i3=0 i4=0 i5=0
+exit\n:testU/4069.nts i0=0 i1=1 i2=0 i3=0 i4=0 i5=0
+exit\n:testU/4069.nts i0=0 i1=0 i2=1 i3=0 i4=0 i5=0
+exit\n:testU/4069.nts i0=0 i1=0 i2=0 i3=1 i4=0 i5=0
+exit\n:testU/4069.nts i0=0 i1=0 i2=0 i3=0 i4=1 i5=0
+exit\n:testU/4069.nts i0=0 i1=0 i2=0 i3=0 i4=0 i5=1
+exit\n:testU/4069.nts i0=1 i1=0 i2=0 i3=0 i4=0 i5=0
+>4081
+exit\n:testU/4081.nts a=0 b=0 c=0 d=0 e=0
+exit\n:testU/4081.nts a=1 b=0 c=0 d=0 e=0
+exit\n:testU/4081.nts a=0 b=1 c=0 d=0 e=0
+exit\n:testU/4081.nts a=0 b=0 c=1 d=0 e=0
+exit\n:testU/4081.nts a=0 b=0 c=0 d=1 e=0
+exit\n:testU/4081.nts a=0 b=0 c=0 d=0 e=1
+exit\n:testU/4081.nts a=1 b=1 c=0 d=0 e=0
+exit\n:testU/4081.nts a=0 b=1 c=1 d=0 e=0
+exit\n:testU/4081.nts a=0 b=0 c=1 d=1 e=0
+exit\n:testU/4081.nts a=0 b=0 c=0 d=1 e=1
+exit\n:testU/4081.nts a=1 b=0 c=0 d=0 e=1
+exit\n:testU/4081.nts a=1 b=1 c=1 d=0 e=0
+exit\n:testU/4081.nts a=0 b=1 c=1 d=1 e=0
+exit\n:testU/4081.nts a=0 b=0 c=1 d=1 e=1
+exit\n:testU/4081.nts a=1 b=0 c=0 d=1 e=1
+exit\n:testU/4081.nts a=1 b=1 c=0 d=0 e=1
+exit\n:testU/4081.nts a=1 b=1 c=1 d=1 e=0
+exit\n:testU/4081.nts a=0 b=1 c=1 d=1 e=1
+exit\n:testU/4081.nts a=1 b=0 c=1 d=1 e=1
+exit\n:testU/4081.nts a=1 b=1 c=0 d=1 e=1
+exit\n:testU/4081.nts a=1 b=1 c=1 d=0 e=1
+exit\n:testU/4081.nts a=1 b=1 c=1 d=1 e=1
+>4071
+exit\n:testU/4071.nts i1=0 i2=0 i3=0 i4=0
+exit\n:testU/4071.nts i1=1 i2=0 i3=0 i4=0
+exit\n:testU/4071.nts i1=0 i2=1 i3=0 i4=0
+exit\n:testU/4071.nts i1=0 i2=0 i3=1 i4=0
+exit\n:testU/4071.nts i1=0 i2=0 i3=0 i4=1
+exit\n:testU/4071.nts i1=1 i2=1 i3=0 i4=0
+exit\n:testU/4071.nts i1=0 i2=1 i3=1 i4=0
+exit\n:testU/4071.nts i1=0 i2=0 i3=1 i4=1
+exit\n:testU/4071.nts i1=1 i2=0 i3=0 i4=1
+exit\n:testU/4071.nts i1=1 i2=1 i3=1 i4=0
+exit\n:testU/4071.nts i1=0 i2=1 i3=1 i4=1
+exit\n:testU/4071.nts i1=1 i2=0 i3=1 i4=1
+exit\n:testU/4071.nts i1=1 i2=1 i3=0 i4=1
+>4512
+exit\n:testU/4512.nts a=0 b=0 c=0 d=0 e=0 f=0 g=0 h=0 i=0 j=0 k=0 l=0 m=0
