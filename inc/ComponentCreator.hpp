@@ -5,7 +5,7 @@
 // Login   <debrau_c@epitech.net>
 // 
 // Started on  Fri Feb 10 23:16:48 2017 Carl DEBRAUWERE
-// Last update Fri Mar  3 20:27:50 2017 Brunel Axel
+// Last update Fri Mar  3 22:03:42 2017 Brunel Axel
 //
 
 #ifndef COMPONENT_CREATOR_HPP
@@ -18,6 +18,7 @@
 # include "Component4011.hpp"
 # include "Component4001.hpp"
 # include "Component4008.hpp"
+# include "Component4030.hpp"
 # include "Component4081.hpp"
 # include "Component4069.hpp"
 # include "Component4071.hpp"
@@ -32,6 +33,7 @@ namespace nts{
       _ptr["4081"] = &ComponentCreator::create4081;
       _ptr["4001"] = &ComponentCreator::create4001;
       _ptr["4011"] = &ComponentCreator::create4011;
+      _ptr["4030"] = &ComponentCreator::create4030;
       _ptr["4008"] = &ComponentCreator::create4008;
       _ptr["4069"] = &ComponentCreator::create4069;
       _ptr["4071"] = &ComponentCreator::create4071;
@@ -41,6 +43,7 @@ namespace nts{
       reco.push_back("4001");
       reco.push_back("4011");
       reco.push_back("4008");
+      reco.push_back("4030");
       reco.push_back("4069");
       reco.push_back("4071");
       reco.push_back("output");
@@ -72,6 +75,10 @@ namespace nts{
     };
     IComponent *create4008(const std::string &value) const{
       IComponent	*ret = new Component4008(value);
+      return ret;
+    };    
+    IComponent *create4030(const std::string &value) const{
+      IComponent	*ret = new Component4030(value);
       return ret;
     };    
     IComponent *create4069(const std::string &value) const{

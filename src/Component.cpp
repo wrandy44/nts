@@ -5,7 +5,7 @@
 // Login   <carl.debrauwere@epitech.eu>
 // 
 // Started on  Thu Mar  2 13:11:40 2017 debrau_c
-// Last update Fri Mar  3 20:05:31 2017 Brunel Axel
+// Last update Fri Mar  3 21:59:34 2017 Brunel Axel
 //
 
 #include "Component.hpp"
@@ -90,7 +90,21 @@ nts::Tristate operator||(nts::Tristate &a, nts::Tristate &b){
 // 1 1 0
 // 0 1 1
 // 1 0 1
-// 1 1 1
+// 0 0 0
+nts::Tristate	tristate_xor(nts::Tristate &a, nts::Tristate &b)
+{
+  if (a == nts::Tristate::UNDEFINED || b == nts::Tristate::UNDEFINED)
+    return nts::Tristate::UNDEFINED;
+  if (a && !b || !a && b)
+    return nts::Tristate::TRUE;
+  return nts::Tristate::FALSE;
+}
+
+// A B R
+// 1 1 0
+// 0 1 1
+// 1 0 1
+// 0 0 1
 nts::Tristate	tristate_nand(nts::Tristate &a, nts::Tristate &b)
 {
   if (a == nts::Tristate::UNDEFINED || b == nts::Tristate::UNDEFINED)

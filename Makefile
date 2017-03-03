@@ -4,7 +4,7 @@
 ## Login   <debrau_c@epitech.net>
 ## 
 ## Started on  Wed Feb  8 14:31:57 2017 Carl DEBRAUWERE
-## Last update Fri Mar  3 20:28:22 2017 Brunel Axel
+## Last update Fri Mar  3 22:20:21 2017 Brunel Axel
 ##
 
 NAME		= xxx
@@ -20,6 +20,7 @@ SRC		= src/main.cpp	\
 	 	  src/Component4081.cpp	\
 		  src/Component4001.cpp	\
 		  src/Component4011.cpp	\
+		  src/Component4030.cpp	\
 		  src/Component4008.cpp	\
 		  src/Component4069.cpp	\
 		  src/Component4071.cpp
