@@ -5,7 +5,7 @@
 // Login   <axel.brunel@epitech.eu>
 // 
 // Started on  Fri Mar  3 19:47:20 2017 Brunel Axel
-// Last update Fri Mar  3 19:51:54 2017 Brunel Axel
+// Last update Fri Mar  3 20:17:36 2017 Brunel Axel
 //
 
 #ifndef COMPONENT4011_H_
@@ -21,6 +21,6 @@ public:
   virtual nts::Tristate Compute(size_t pin_num_this = 1);
 private:
   std::string	_flag;
-}
+};
 
 #endif /* !COMPONENT4011_H_ */
