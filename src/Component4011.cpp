@@ -5,7 +5,7 @@
 // Login   <axel.brunel@epitech.eu>
 // 
 // Started on  Fri Mar  3 19:52:15 2017 Brunel Axel
-// Last update Fri Mar  3 20:07:50 2017 Brunel Axel
+// Last update Fri Mar  3 20:24:27 2017 Brunel Axel
 //
 
 #include "ComponentCreator.hpp"
@@ -53,21 +53,3 @@ nts::Tristate	Component4011::Compute(size_t pin_num_this)
   _pin[10]._pin = tristate_nand(_pin[11]._pin, _pin[12]._pin);
   return (_pin[pin_num_this - 1]._pin);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -5,7 +5,7 @@
 // Login   <debrau_c@epitech.net>
 // 
 // Started on  Fri Feb 10 23:16:48 2017 Carl DEBRAUWERE
-// Last update Fri Mar  3 20:10:10 2017 Brunel Axel
+// Last update Fri Mar  3 20:27:50 2017 Brunel Axel
 //
 
 #ifndef COMPONENT_CREATOR_HPP
@@ -31,7 +31,7 @@ namespace nts{
     ComponentCreator(){
       _ptr["4081"] = &ComponentCreator::create4081;
       _ptr["4001"] = &ComponentCreator::create4001;
-      _ptr["4011"] = &ComponentCreator::create4001;
+      _ptr["4011"] = &ComponentCreator::create4011;
       _ptr["4008"] = &ComponentCreator::create4008;
       _ptr["4069"] = &ComponentCreator::create4069;
       _ptr["4071"] = &ComponentCreator::create4071;
