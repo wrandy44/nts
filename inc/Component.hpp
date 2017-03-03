@@ -4,7 +4,7 @@
 ** Login   <debrau_c@epitech.net>
 ** 
 ** Started on  Mon Jan 16 09:33:45 2017 Carl DEBRAUWERE
-// Last update Fri Mar  3 02:42:16 2017 debrau_c
+// Last update Fri Mar  3 18:51:57 2017 debrau_c
 */
 
 #ifndef _COMPONENT_H_
@@ -68,5 +68,6 @@ protected:
 nts::Tristate operator!(nts::Tristate &a);
 nts::Tristate operator&&(nts::Tristate &a, nts::Tristate &b);
 nts::Tristate operator||(nts::Tristate &a, nts::Tristate &b);
+nts::Tristate tristate_nor(nts::Tristate &a, nts::Tristate &b);
 
 #endif /* Component */
