@@ -4,7 +4,7 @@
 ## Login   <debrau_c@epitech.net>
 ## 
 ## Started on  Wed Feb  8 14:31:57 2017 Carl DEBRAUWERE
-## Last update Sat Mar  4 02:19:59 2017 debrau_c
+## Last update Sat Mar  4 18:32:53 2017 Brunel Axel
 ##
 
 NAME		= xxx
@@ -15,6 +15,8 @@ SRC		= src/main.cpp	\
 		  src/Parser.cpp	\
 		  src/Input.cpp		\
 		  src/myExcept.cpp	\
+		  src/False.cpp		\
+		  src/True.cpp		\
 		  src/Link.cpp		\
 		  src/Component.cpp	\
 	 	  src/Component4081.cpp	\
