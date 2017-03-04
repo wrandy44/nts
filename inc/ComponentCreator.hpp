@@ -5,7 +5,7 @@
 // Login   <debrau_c@epitech.net>
 // 
 // Started on  Fri Feb 10 23:16:48 2017 Carl DEBRAUWERE
-// Last update Fri Mar  3 22:03:42 2017 Brunel Axel
+// Last update Sat Mar  4 02:42:08 2017 debrau_c
 //
 
 #ifndef COMPONENT_CREATOR_HPP
@@ -22,6 +22,7 @@
 # include "Component4081.hpp"
 # include "Component4069.hpp"
 # include "Component4071.hpp"
+# include "Clock.hpp"
 # include "myExcept.hpp"
 
 namespace nts{
@@ -39,6 +40,7 @@ namespace nts{
       _ptr["4071"] = &ComponentCreator::create4071;
       _ptr["output"] = &ComponentCreator::createOutput;
       _ptr["input"] = &ComponentCreator::createInput;
+      _ptr["clock"] = &ComponentCreator::createClock;
       reco.push_back("4081");
       reco.push_back("4001");
       reco.push_back("4011");
@@ -48,6 +50,7 @@ namespace nts{
       reco.push_back("4071");
       reco.push_back("output");
       reco.push_back("input");
+      reco.push_back("clock");
     };
     ~ComponentCreator(){};
     IComponent *createComponent(const std::string &type,
@@ -95,6 +98,10 @@ namespace nts{
     };
     IComponent *createOutput(const std::string &value) const{
       IComponent	*ret = new Output(value);
+      return ret;
+    };
+    IComponent *createClock(const std::string &value) const{
+      IComponent	*ret = new Clock(value);
       return ret;
     };
     //IComponent * create4013(const std::string &value) const;

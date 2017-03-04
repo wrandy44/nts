@@ -4,7 +4,7 @@
 ## Login   <debrau_c@epitech.net>
 ## 
 ## Started on  Wed Feb  8 14:31:57 2017 Carl DEBRAUWERE
-## Last update Fri Mar  3 22:20:21 2017 Brunel Axel
+## Last update Sat Mar  4 02:19:59 2017 debrau_c
 ##
 
 NAME		= xxx
@@ -23,7 +23,8 @@ SRC		= src/main.cpp	\
 		  src/Component4030.cpp	\
 		  src/Component4008.cpp	\
 		  src/Component4069.cpp	\
-		  src/Component4071.cpp
+		  src/Component4071.cpp	\
+	  	  src/Clock.cpp
 
 CC		= g++
 

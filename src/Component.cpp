@@ -5,7 +5,7 @@
 // Login   <carl.debrauwere@epitech.eu>
 // 
 // Started on  Thu Mar  2 13:11:40 2017 debrau_c
-// Last update Fri Mar  3 21:59:34 2017 Brunel Axel
+// Last update Sat Mar  4 02:53:18 2017 debrau_c
 //
 
 #include "Component.hpp"
@@ -18,6 +18,7 @@ nts::Tristate Component::Compute(size_t pin_num_this){};
 
 void Component::pushLink(size_t pin_num)
 {
+  std::cout << pin_num << std::endl;
   _pin[pin_num -1]._link.pushValue(_pin[pin_num - 1]._pin);
 }
   
@@ -51,7 +52,9 @@ void			Component::setType(std::string const &type)
 }
 const std::string	&Component::getName(){return _name; };
 const std::string	&Component::getType(){return _type; };
+
 void			Component::setPin(nts::Tristate t, size_t pin_num){
+  std::cout << "  :" <<pin_num << std::endl;
   if (pin_num <= _nbPin && pin_num > 0)
     _pin[pin_num - 1]._pin = t;
 }
