@@ -1,11 +1,11 @@
 //
-// Component4008.cpp for component4008 in /home/brunel/Rendu/Semestre_3/CPP/cpp_nanotekspice/src
+1;2802;0c// Component4008.cpp for component4008 in /home/brunel/Rendu/Semestre_3/CPP/cpp_nanotekspice/src
 // 
 // Made by Brunel Axel
 // Login   <axel.brunel@epitech.eu>
 // 
 // Started on  Thu Mar  2 17:12:30 2017 Brunel Axel
-// Last update Sat Mar  4 03:37:17 2017 Brunel Axel
+// Last update Sat Mar  4 14:42:40 2017 Brunel Axel
 //
 
 #include "ComponentCreator.hpp"
