@@ -5,7 +5,7 @@
 // Login   <debrau_c@epitech.net>
 // 
 // Started on  Fri Feb 10 12:55:51 2017 Carl DEBRAUWERE
-// Last update Tue Feb 28 21:26:40 2017 debrau_c
+// Last update Sat Mar  4 21:57:03 2017 debrau_c
 //
 
 #ifndef _PARSER_HPP_
@@ -20,7 +20,9 @@ namespace nts{
     std::vector<std::string>	tmpComp;
     std::vector<std::string>	tmpLink;
     std::vector<std::string>	tmpLinkEnd;
-    
+    std::regex	_regCompo;
+    std::regex	_regLink;
+    std::regex	_regSection;
     //Only used on class
     void	parseDefault(t_ast_node &root);
   public:

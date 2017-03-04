@@ -5,7 +5,7 @@
 // Login   <debrau_c@epitech.net>
 // 
 // Started on  Fri Feb 10 14:19:31 2017 Carl DEBRAUWERE
-// Last update Wed Mar  1 12:59:48 2017 debrau_c
+// Last update Sat Mar  4 22:13:52 2017 debrau_c
 //
 
 #include <regex>
@@ -14,7 +14,12 @@
 #include "myExcept.hpp"
 
 namespace nts{
-  Parser::Parser(){ _state = ASTNodeType::DEFAULT; }
+  Parser::Parser(){
+    _state = ASTNodeType::DEFAULT;
+    _regCompo=std::regex("^[a-zA-Z0-9]+[ ][a-zA-Z0-9().]+$");
+    _regLink=std::regex("^[a-zA-Z0-9]+[:][a-zA-Z0-9]+[ ][a-zA-Z0-9]+[:][a-zA-Z0-9]+$");
+    _regSection=std::regex("^[.][a-zA-Z]+[:]$");    
+  }
   std::string	nts::Parser::getValueComp(std::string const& input)
   {
     size_t	pos = input.find(' ') + 1;
@@ -145,15 +150,11 @@ namespace nts{
   }
   
   ASTNodeType	Parser::typeOf(std::string const& input){
-    std::regex	regCompo("^[a-zA-Z0-9]+[ ][a-zA-Z0-9().]+$");
-    std::regex	regLink("^[a-zA-Z0-9]+[:][a-zA-Z0-9]+[ ][a-zA-Z0-9]+[:][a-zA-Z0-9]+$");
-    std::regex	regSection("^[.][a-zA-Z]+[:]$");
-    
-    if (std::regex_match(input, regCompo))
+    if (std::regex_match(input, _regCompo))
       return ASTNodeType::COMPONENT;
-    else if (std::regex_match(input, regLink))
+    else if (std::regex_match(input, _regLink))
       return ASTNodeType::LINK;
-    else if (std::regex_match(input, regSection))
+    else if (std::regex_match(input, _regSection))
       return ASTNodeType::SECTION;
     return ASTNodeType::DEFAULT;
   }
@@ -232,7 +233,6 @@ namespace nts{
 	  throw nts::myExcept(std::string("LinkError: ").append(*i).append(" undeclared"));
       }
   }
-  
   void	Parser::parseTree(t_ast_node& root){
     t_ast_node	*link, *chip;
     
@@ -245,6 +245,8 @@ namespace nts{
       throw nts::myExcept(std::string("No section"));
     check_dble_comp(tmpComp);
     check_link_undeclared(tmpComp, tmpLink, tmpLinkEnd);
+    if (tmpLink.size() == 0 || tmpLinkEnd.size() == 0)
+      throw nts::myExcept("Error: output is not linked");    
   }
   
   t_ast_node	*Parser::createTree(){

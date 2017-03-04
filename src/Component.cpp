@@ -5,7 +5,7 @@
 // Login   <carl.debrauwere@epitech.eu>
 // 
 // Started on  Thu Mar  2 13:11:40 2017 debrau_c
-// Last update Sat Mar  4 20:38:56 2017 debrau_c
+// Last update Sat Mar  4 21:38:33 2017 debrau_c
 //
 
 #include "Component.hpp"
@@ -23,14 +23,19 @@ void	Component::pushLinkOutput()
     {
       if (i->_type == PIN_OUT && i->_pin != nts::Tristate::UNDEFINED)
 	{
-	  i->_link.pushValue(i->_pin);
+	  if (i->_link.isLinked())
+	    i->_link.pushValue(i->_pin);
 	}
     }
 }
 
 void Component::pushLink(size_t pin_num)
 {
-  _pin[pin_num -1]._link.pushValue(_pin[pin_num - 1]._pin);
+  if (pin_num > 0
+      && pin_num <= _nbPin
+      && _pin[pin_num -1]._type == PIN_OUT
+      && _pin[pin_num - 1]._link.isLinked())
+    _pin[pin_num -1]._link.pushValue(_pin[pin_num - 1]._pin);
 }
   
 void		Component::SetLink(size_t pin_num_this,

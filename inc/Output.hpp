@@ -5,7 +5,7 @@
 // Login   <debrau_c@epitech.net>
 // 
 // Started on  Sat Feb 11 12:53:12 2017 Carl DEBRAUWERE
-// Last update Sat Mar  4 20:37:18 2017 debrau_c
+// Last update Sat Mar  4 22:12:23 2017 debrau_c
 //
 
 #ifndef _OUTPUT_H_
@@ -41,6 +41,10 @@ public:
 	  std::cout << "NULL" << std::endl;
       }
   };
+  bool isLinked()
+  {
+    return _pin[0]._link.isLinked();
+  }
 };
 
 #endif /* Output */

@@ -5,7 +5,7 @@
 // Login   <debrau_c@epitech.net>
 // 
 // Started on  Fri Feb 10 16:38:12 2017 Carl DEBRAUWERE
-// Last update Sat Mar  4 17:54:48 2017 debrau_c
+// Last update Sat Mar  4 22:13:20 2017 debrau_c
 //
 
 #ifndef _V_MACHINE_HPP_
@@ -103,8 +103,10 @@ public:
     for (i = _comp.begin(); i != _comp.end(); i++)
       sorted.push_back(dynamic_cast<Component *>(*i));
     std::sort(sorted.begin(), sorted.end(), sortComponentByNameSup);
-    for (j = sorted.end() - 1; j != sorted.begin() - 1; j--)
+    for (j = sorted.end() - 1; j != sorted.begin() - 1; j--){
       (*j)->Dump();
+
+    }
   }
   
   void	setPin(int ac, char **av){
@@ -141,13 +143,20 @@ public:
       }
     return true;
   }
-  
+
+  void		reverse_clock()
+  {
+    for (std::vector<nts::IComponent *>::iterator i = _comp.begin(); i != _comp.end(); i++)
+      {
+	Component *tmp = dynamic_cast<Component *>(*i);
+	if (tmp->getType() == "Clock")
+	tmp->Compute();
+      }
+  }
   void		simulate()
   {
     std::vector<nts::IComponent *> ins;
 
-    
-    //Push input
     for (std::vector<nts::IComponent *>::iterator i = _comp.begin(); i != _comp.end(); i++)
       {
 	Component *tmp = dynamic_cast<Component *>(*i);
@@ -167,7 +176,6 @@ public:
 	for (std::vector<nts::IComponent *>::iterator i = _comp.begin(); i != _comp.end(); i++)
 	  {
 	    Component *tmp = dynamic_cast<Component *>(*i);
-
 	    tmp->Compute();
 	    tmp->pushLinkOutput();
 	  }
@@ -209,7 +217,15 @@ public:
       }
     return (1);
   }
-  
+  void	checkOutputLink()
+  {
+    for (std::vector<nts::IComponent *>::iterator i = _comp.begin(); i != _comp.end(); i++)
+      {
+	if (dynamic_cast<Component *>(*i)->getType() == "Output"
+	    && !dynamic_cast<Output *>(*i)->isLinked())
+	  throw nts::myExcept("Error: output is not linked");
+      }
+  }
 };
 
 # endif /*_VIRTUAL_MACHIN_HPP_ */

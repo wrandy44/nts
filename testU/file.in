@@ -12,13 +12,28 @@
 :testU/trash/5.nts a=0		# missing b
 :testU/trash/9.nts a=0 b=0	# link right no pin
 :testU/trash/7.nts a=0 b=0	# links not declared rvalue
-:testU/trash/12.nts a=0 b=0	# Component not registereed :228  
+:testU/trash/12.nts a=0 b=0	# Component not registereed :228
+> Trash Link
+:testU/trash/13.nts i=0 b=0 a=0 # link Size == 0
+:testU/trash/14.nts i=0 b=0 a=0 # link Size == 0
+:testU/trash/15.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/16.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/17.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/18.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/19.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/20.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/21.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/22.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/23.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/24.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/24.nts i=0 b=0 a=0 # link Size == 0
+#:testU/trash/25./xxx testU/trash1.nts i=0 a=0 b=1.nts i=0 b=0 a=0 # link Size == 0
 > *Don't care of this 4 :"
 :testU/trash/8.nts a=0 b=0	# link left no pin
 :testU/trash/6.nts a=0 b=0	# links not declared lvalue
 :testU/trash/10.nts a=0 b=0	# link left no var
 :testU/trash/11.nts a=0 b=0	# link right no var
-
+:testU/trash1.nts i=0 a=0 b=0
 #
 #  Need test no link, no chipset, gate:45 a:-1 
 #
