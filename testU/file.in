@@ -184,3 +184,7 @@ exit\n:testU/4030.nts i1=0 i2=0 i3=0 i4=0 i5=1 i6=0 i7=1 i8=0
 exit\n:testU/4030.nts i1=0 i2=0 i3=0 i4=0 i5=0 i6=1 i7=0 i8=1
 exit\n:testU/4030.nts i1=0 i2=0 i3=0 i4=0 i5=0 i6=0 i7=1 i8=0
 exit\n:testU/4030.nts i1=1 i2=0 i3=0 i4=0 i5=0 i6=0 i7=0 i8=1
+>Clock
+>	Basic :
+exit\n:testU/clock.nts a=0
+simulate\ndisplay\nexit\n:testU/clock.nts a=0

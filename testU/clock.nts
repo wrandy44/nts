@@ -4,5 +4,5 @@
 clock a
 output s
 .links:
-s:1 a1
+s:1 a:1
 #and:3 s:1

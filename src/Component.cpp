@@ -5,7 +5,7 @@
 // Login   <carl.debrauwere@epitech.eu>
 // 
 // Started on  Thu Mar  2 13:11:40 2017 debrau_c
-// Last update Sat Mar  4 16:27:50 2017 debrau_c
+// Last update Sat Mar  4 20:38:56 2017 debrau_c
 //
 
 #include "Component.hpp"
@@ -16,9 +16,20 @@ Component::Component(const std::string &n) {
 Component::~Component(){};
 nts::Tristate Component::Compute(size_t pin_num_this){};
 
+void	Component::pushLinkOutput()
+{
+  std::vector<_pinLink_t>::iterator i;
+  for (i = _pin.begin(); i != _pin.end(); i++)
+    {
+      if (i->_type == PIN_OUT && i->_pin != nts::Tristate::UNDEFINED)
+	{
+	  i->_link.pushValue(i->_pin);
+	}
+    }
+}
+
 void Component::pushLink(size_t pin_num)
 {
-  std::cout << pin_num << std::endl;
   _pin[pin_num -1]._link.pushValue(_pin[pin_num - 1]._pin);
 }
   
@@ -54,9 +65,13 @@ const std::string	&Component::getName(){return _name; };
 const std::string	&Component::getType(){return _type; };
 
 void			Component::setPin(nts::Tristate t, size_t pin_num){
-  std::cout << "  :" <<pin_num << std::endl;
   if (pin_num <= _nbPin && pin_num > 0)
     _pin[pin_num - 1]._pin = t;
+}
+
+nts::Tristate		Component::getPin(size_t num_pin)
+{
+  return (_pin[num_pin -1]._pin);
 }
 
 nts::Tristate operator!(nts::Tristate &a){

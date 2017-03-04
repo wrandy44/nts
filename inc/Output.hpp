@@ -5,7 +5,7 @@
 // Login   <debrau_c@epitech.net>
 // 
 // Started on  Sat Feb 11 12:53:12 2017 Carl DEBRAUWERE
-// Last update Wed Mar  1 19:14:08 2017 debrau_c
+// Last update Sat Mar  4 20:37:18 2017 debrau_c
 //
 
 #ifndef _OUTPUT_H_
@@ -17,13 +17,15 @@
 #include "IComponent.hpp"
 
 class Output : public Component{
+  bool	setted;
 public:
   Output(const std::string &n):Component::Component(n){
     _type = "Output";
     _nbPin = 1;
+    
     for (unsigned int i = 0; i < _nbPin; i++){
       _pin.push_back((_pinLink_t){nts::UNDEFINED});
-  }
+    }
   };
   virtual ~Output(){};
   virtual nts::Tristate Compute(size_t pin_num_this = 1){};

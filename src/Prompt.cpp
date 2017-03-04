@@ -4,7 +4,7 @@
 ** Login   <debrau_c@epitech.net>
 ** 
 ** Started on  Mon Jan 16 09:33:45 2017 Carl DEBRAUWERE
-// Last update Sat Mar  4 02:51:16 2017 debrau_c
+// Last update Sat Mar  4 16:35:40 2017 debrau_c
 */
 
 #include <iostream>
@@ -65,8 +65,8 @@ int	Prompt::set(int argc, char **argv)
   vmachine.setInput(argc, argv);
   vmachine.setPin(argc, argv);
   vmachine.setLinks(pars.getSectionByLexeme("links", root));
-  //  vmachine.simulate();
-  //vmachine.display();
+  vmachine.simulate();
+  vmachine.display();
   return 0;
 };
 

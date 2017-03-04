@@ -5,7 +5,7 @@
 // Login   <debrau_c@epitech.net>
 // 
 // Started on  Fri Feb 10 16:38:12 2017 Carl DEBRAUWERE
-// Last update Thu Mar  2 23:03:55 2017 debrau_c
+// Last update Sat Mar  4 17:54:48 2017 debrau_c
 //
 
 #ifndef _V_MACHINE_HPP_
@@ -27,7 +27,7 @@ public:
     std::vector<nts::IComponent *>::iterator i;
     for (i = _comp.begin(); i != _comp.end(); i++){
       Component *tmp = dynamic_cast<Component *>(*i);
-      if (tmp->getType() == "Input")
+      if (tmp->getType() == "Input" || tmp->getType() == "Clock")
 	{
 	  bool set = false;
 	  for (int j = 2; j < ac; j++){
@@ -62,19 +62,6 @@ public:
 	tmp = dynamic_cast<Component *>(fck);
 	_comp.push_back(tmp);
       }
-  }
-
-  int	getCompByNames(std::string const &name)
-  {
-    std::vector<nts::IComponent *>::iterator	i;
-    int						fdp;
-
-    for (i = _comp.begin(), fdp = 0; i != _comp.end(); i++, fdp++)
-      {
-	if (dynamic_cast<Component *>((*i))->getName() == name)
-	  return (fdp);
-      }
-    // return (-1);
   }
 
   void			setComponents(nts::t_ast_node *root)
@@ -180,6 +167,7 @@ public:
 	for (std::vector<nts::IComponent *>::iterator i = _comp.begin(); i != _comp.end(); i++)
 	  {
 	    Component *tmp = dynamic_cast<Component *>(*i);
+
 	    tmp->Compute();
 	    tmp->pushLinkOutput();
 	  }
@@ -204,6 +192,7 @@ public:
 	std::cout << (*i)->getName() << "=" << (*i)->getPin() << std::endl;
       }
   }
+  
   int	setInput(std::string name, size_t state)
   {
     std::vector<nts::IComponent *>::iterator i;
