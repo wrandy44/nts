@@ -5,8 +5,9 @@ input b
 4081 and0
 output out
 .links:
-#i:1 and0:1
-#a:1 and0:2
-#and0:3 and0:5
-#b:1 and0:6
-#and0:4 out:1
+i:1 and0:1
+a:1 and0:2
+and0:3 and0:5
+b:1 and0:6
+and0:4 out:1
+i:1 i:1

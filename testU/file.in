@@ -17,11 +17,11 @@
 :testU/trash/13.nts i=0 b=0 a=0 # link Size == 0
 :testU/trash/14.nts i=0 b=0 a=0 # link Size == 0
 :testU/trash/15.nts i=0 b=0 a=0 # link Size == 0
-#:testU/trash/16.nts i=0 b=0 a=0 # link Size == 0
-#:testU/trash/17.nts i=0 b=0 a=0 # link Size == 0
-#:testU/trash/18.nts i=0 b=0 a=0 # link Size == 0
-#:testU/trash/19.nts i=0 b=0 a=0 # link Size == 0
-#:testU/trash/20.nts i=0 b=0 a=0 # link Size == 0
+:testU/trash/16.nts i=0 b=0 a=0 # link Size == 0
+:testU/trash/17.nts i=0 b=0 a=0 # link Size == 0
+:testU/trash/18.nts i=0 b=0 a=0 # link Size == 0
+:testU/trash/19.nts i=0 b=0 a=0 # link Size == 0
+:testU/trash/20.nts i=0 b=0 a=0 # link Size == 0
 #:testU/trash/21.nts i=0 b=0 a=0 # link Size == 0
 #:testU/trash/22.nts i=0 b=0 a=0 # link Size == 0
 #:testU/trash/23.nts i=0 b=0 a=0 # link Size == 0
@@ -203,3 +203,30 @@ exit\n:testU/4030.nts i1=1 i2=0 i3=0 i4=0 i5=0 i6=0 i7=0 i8=1
 >	Basic :
 exit\n:testU/clock.nts a=0
 simulate\ndisplay\nexit\n:testU/clock.nts a=0
+a=1\nsimulate\ndisplay\nexit\n:testU/clock.nts a=0
+
+> ALL IN unit_test:
+> 5input_and
+:unit_test/5input_and.nts a=0 b=0 c=0 d=0 e=0 
+:unit_test/5input_or.nts a=0 b=0 c=0 d=0 e=0 
+:unit_test/adder.nts a0=0 b0=0 a1=0 b1=0 a2=0 b2=0 a3=0 b3=0 cin=0
+:unit_test/and.nts i8=0 i7=0 i6=0 i5=0 i4=0 i3=0 i2=0 i1=0
+:unit_test/clock.nts a=0 b=0 c=0 d=0 e=0 
+:unit_test/counter.nts a=0 b=0 c=0 d=0 e=0 clock=0
+:unit_test/decoder.nts a0=0 a1=0 a2=0 a3=0 strobe=0 inhibit=1
+:unit_test/error.nts i1=0 i2=0 i3=0 i4=0
+
+:unit_test/false.nts 
+:unit_test/johnson.nts clockup=0 master_reset=1
+:unit_test/mandion.nts a=0 b=0 c=0
+:unit_test/nand.nts i1=0 i2=0 i3=0 i4=0 i5=0 i6=0 i7=0 i8=0
+:unit_test/nor.nts i1=0 i2=0 i3=0 i4=0 i5=0 i6=0 i7=0 i8=0
+:unit_test/or.nts i1=0 i2=0 i3=0 i4=0 i5=0 i6=0 i7=0 i8=0
+:unit_test/xor.nts i1=0 i2=0 i3=0 i4=0 i5=0 i6=0 i7=0 i8=0
+:unit_test/true.nts b=1
+
+
+
+
+
+
