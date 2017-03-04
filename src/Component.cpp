@@ -5,7 +5,7 @@
 // Login   <carl.debrauwere@epitech.eu>
 // 
 // Started on  Thu Mar  2 13:11:40 2017 debrau_c
-// Last update Fri Mar  3 21:59:34 2017 Brunel Axel
+// Last update Sat Mar  4 03:23:42 2017 Brunel Axel
 //
 
 #include "Component.hpp"
@@ -98,6 +98,36 @@ nts::Tristate	tristate_xor(nts::Tristate &a, nts::Tristate &b)
   if (a && !b || !a && b)
     return nts::Tristate::TRUE;
   return nts::Tristate::FALSE;
+}
+
+// A B C Co S
+// 0 0 0  0 0
+// 0 0 1  0 1
+// 0 1 0  0 1
+// 0 1 1  1 0
+// 1 0 0  0 1
+// 1 0 1  1 0
+// 1 1 0  1 0
+// 1 1 1  1 1
+nts::Tristate	tristate_adder_sum(nts::Tristate &a, nts::Tristate &b, nts::Tristate &c)
+{
+  if (a == nts::Tristate::UNDEFINED
+      || b == nts::Tristate::UNDEFINED
+      || c == nts::Tristate::UNDEFINED)
+    return nts::Tristate::UNDEFINED;
+  if ((!a && !b && !c) || (!a && !b && c) || (!a && b && !c) || (a && !b && !c))
+    return nts::Tristate::FALSE;
+  return nts::Tristate::TRUE;
+}
+nts::Tristate	tristate_adder(nts::Tristate &a, nts::Tristate &b, nts::Tristate &c)
+{
+  if (a == nts::Tristate::UNDEFINED
+      || b == nts::Tristate::UNDEFINED
+      || c == nts::Tristate::UNDEFINED)
+    return nts::Tristate::UNDEFINED;
+  if ((!a && !b && !c) || (!a && b && c) || (a && !b && c) || (a && b && !c))
+    return nts::Tristate::FALSE;
+  return nts::Tristate::TRUE;
 }
 
 // A B R

@@ -5,7 +5,7 @@
 // Login   <axel.brunel@epitech.eu>
 // 
 // Started on  Thu Mar  2 17:12:30 2017 Brunel Axel
-// Last update Fri Mar  3 15:16:35 2017 Brunel Axel
+// Last update Sat Mar  4 03:37:17 2017 Brunel Axel
 //
 
 #include "ComponentCreator.hpp"
@@ -43,395 +43,39 @@ Component4008::~Component4008()
 {
 }
 
-// void		Component4008::output1()
-// {
-//   if (_pin[6]._pin == nts::FALSE
-//       && _pin[5]._pin == nts::FALSE
-//       && _pin[8]._pin == nts::FALSE)
-//     {
-//       _pin[13]._pin == nts::FALSE;
-//       _pin[9]._pin = nts::FALSE;
-//     }
-//   else if (_pin[6]._pin == nts::UNDEFINED
-// 	   || _pin[5]._pin == nts::UNDEFINED
-// 	   || _pin[8]._pin == nts::UNDEFINED)
-//     {
-//       _pin[13]._pin == nts::UNDEFINED;
-//       _pin[9]._pin = nts::UNDEFINED;
-//     }
-//   else
-//     {
-//       _pin[13]._pin = nts::TRUE;
-//       _pin[9]._pin = nts::TRUE;
-//     }
-// }
-
-// void		Component4008::output2()
-// {
-//   if (_pin[6]._pin == nts::TRUE
-//       && _pin[5]._pin == nts::FALSE
-//       && _pin[8]._pin == nts::FALSE)
-//     {
-//       _pin[13]._pin == nts::FALSE;
-//       _pin[9]._pin = nts::TRUE;
-//     }
-//   else if (_pin[6]._pin == nts::UNDEFINED
-// 	   || _pin[5]._pin == nts::UNDEFINED
-// 	   || _pin[8]._pin == nts::UNDEFINED)
-//     {
-//       _pin[13]._pin == nts::UNDEFINED;
-//       _pin[9]._pin = nts::UNDEFINED;
-//     }
-//   else
-//     {
-//       _pin[13]._pin = nts::TRUE;
-//       _pin[9]._pin = nts::FALSE;
-//     }
-// }
-
-// void		Component4008::output3()
-// {
-//   if (_pin[4]._pin == nts::FALSE
-//       && _pin[3]._pin == nts::TRUE
-//       && _pin[9]._pin == nts::FALSE)
-//     {
-//       _pin[13]._pin == nts::FALSE;
-//       _pin[10]._pin = nts::TRUE;
-//     }
-//   else if (_pin[4]._pin == nts::UNDEFINED
-// 	   || _pin[3]._pin == nts::UNDEFINED
-// 	   || _pin[9]._pin == nts::UNDEFINED)
-//     {
-//       _pin[13]._pin == nts::UNDEFINED;
-//       _pin[10]._pin = nts::UNDEFINED;
-//     }
-//   else
-//     {
-//       _pin[13]._pin = nts::TRUE;
-//       _pin[10]._pin = nts::FALSE;
-//     }
-// }
-
-// void		Component4008::output4()
-// {
-//   if (_pin[4]._pin == nts::TRUE
-//       && _pin[3]._pin == nts::TRUE
-//       && _pin[9]._pin == nts::FALSE)
-//     {
-//       _pin[13]._pin == nts::TRUE;
-//       _pin[10]._pin = nts::FALSE;
-//     }
-//   else if (_pin[4]._pin == nts::UNDEFINED
-// 	   || _pin[3]._pin == nts::UNDEFINED
-// 	   || _pin[9]._pin == nts::UNDEFINED)
-//     {
-//       _pin[13]._pin == nts::UNDEFINED;
-//       _pin[10]._pin = nts::UNDEFINED;
-//     }
-//   else
-//     {
-//       _pin[13]._pin = nts::FALSE;
-//       _pin[10]._pin = nts::TRUE;
-//     }
-// }
-
-// void		Component4008::output5()
-// {
-//   if (_pin[1]._pin == nts::FALSE
-//       && _pin[2]._pin == nts::FALSE
-//       && _pin[10]._pin == nts::TRUE)
-//     {
-//       _pin[13]._pin == nts::FALSE;
-//       _pin[11]._pin = nts::TRUE;
-//     }
-//   else if (_pin[1]._pin == nts::UNDEFINED
-// 	   || _pin[2]._pin == nts::UNDEFINED
-// 	   || _pin[10]._pin == nts::UNDEFINED)
-//     {
-//       _pin[13]._pin == nts::UNDEFINED;
-//       _pin[11]._pin = nts::UNDEFINED;
-//     }
-//   else
-//     {
-//       _pin[13]._pin = nts::TRUE;
-//       _pin[11]._pin = nts::FALSE;
-//     }
-// }
-
-// void		Component4008::output6()
-// {
-//   if (_pin[1]._pin == nts::FALSE
-//       && _pin[2]._pin == nts::TRUE
-//       && _pin[10]._pin == nts::TRUE)
-//     {
-//       _pin[13]._pin == nts::TRUE;
-//       _pin[11]._pin = nts::FALSE;
-//     }
-//   else if (_pin[1]._pin == nts::UNDEFINED
-// 	   || _pin[2]._pin == nts::UNDEFINED
-// 	   || _pin[10]._pin == nts::UNDEFINED)
-//     {
-//       _pin[13]._pin == nts::UNDEFINED;
-//       _pin[11]._pin = nts::UNDEFINED;
-//     }
-//   else
-//     {
-//       _pin[13]._pin = nts::FALSE;
-//       _pin[11]._pin = nts::TRUE;
-//     }
-// }
-
-// void		Component4008::output7()
-// {
-//   if (_pin[0]._pin == nts::FALSE
-//       && _pin[14]._pin == nts::TRUE
-//       && _pin[11]._pin == nts::TRUE)
-//     {
-//       _pin[13]._pin == nts::TRUE;
-//       _pin[12]._pin = nts::FALSE;
-//     }
-//   else if (_pin[0]._pin == nts::UNDEFINED
-// 	   || _pin[14]._pin == nts::UNDEFINED
-// 	   || _pin[11]._pin == nts::UNDEFINED)
-//     {
-//       _pin[13]._pin == nts::UNDEFINED;
-//       _pin[12]._pin = nts::UNDEFINED;
-//     }
-//   else
-//     {
-//       _pin[13]._pin = nts::FALSE;
-//       _pin[12]._pin = nts::TRUE;
-//     }
-// }
-
-// void		Component4008::output8()
-// {
-//   if (_pin[0]._pin == nts::TRUE
-//       && _pin[14]._pin == nts::TRUE
-//       && _pin[11]._pin == nts::TRUE)
-//     {
-//       _pin[13]._pin == nts::TRUE;
-//       _pin[12]._pin = nts::TRUE;
-//     }
-//   else if (_pin[0]._pin == nts::UNDEFINED
-// 	   || _pin[14]._pin == nts::UNDEFINED
-// 	   || _pin[11]._pin == nts::UNDEFINED)
-//     {
-//       _pin[13]._pin == nts::UNDEFINED;
-//       _pin[12]._pin = nts::UNDEFINED;
-//     }
-//   else
-//     {
-//       _pin[13]._pin = nts::FALSE;
-//       _pin[12]._pin = nts::FALSE;
-//     }
-// }
-
-void		Component4008::output_1()
+void		Component4008::output1()
 {
-  if (_pin[6]._pin == nts::FALSE && _pin[5]._pin == nts::FALSE && _pin[8]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[9]._pin = nts::FALSE;
-    }
-  else if (_pin[6]._pin == nts::TRUE && _pin[5]._pin == nts::FALSE && _pin[8]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[9]._pin = nts::TRUE;
-    }
-  else if (_pin[6]._pin == nts::FALSE && _pin[5]._pin == nts::TRUE && _pin[8]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[9]._pin = nts::TRUE;
-    }
-  else if (_pin[6]._pin == nts::TRUE && _pin[5]._pin == nts::TRUE && _pin[8]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[9]._pin = nts::FALSE;
-    }
-  else if (_pin[6]._pin == nts::FALSE && _pin[5]._pin == nts::FALSE && _pin[8]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[9]._pin = nts::TRUE;
-    }
-  else if (_pin[6]._pin == nts::TRUE && _pin[5]._pin == nts::FALSE && _pin[8]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[9]._pin = nts::FALSE;
-    }
-  else if (_pin[6]._pin == nts::FALSE && _pin[5]._pin == nts::TRUE && _pin[8]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[9]._pin = nts::FALSE;
-    }
-  else if (_pin[6]._pin == nts::TRUE && _pin[5]._pin == nts::TRUE && _pin[8]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[9]._pin = nts::TRUE;
-    }
-  else if (_pin[6]._pin == nts::UNDEFINED || _pin[5]._pin == nts::UNDEFINED || _pin[8]._pin == nts::UNDEFINED)
-    {
-      _pin[13]._pin = nts::UNDEFINED;
-      _pin[9]._pin = nts::UNDEFINED;
-    }
+  _pin[9]._pin = tristate_adder(_pin[6]._pin, _pin[5]._pin, _pin[8]._pin);
+  _pin[8]._pin = tristate_adder_sum(_pin[6]._pin, _pin[5]._pin, _pin[8]._pin);
 }
 
-void		Component4008::output_2()
+void		Component4008::output2()
 {
-  if (_pin[4]._pin == nts::FALSE && _pin[3]._pin == nts::FALSE && _pin[9]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[10]._pin = nts::FALSE;
-    }
-  else if (_pin[4]._pin == nts::TRUE && _pin[3]._pin == nts::FALSE && _pin[9]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[10]._pin = nts::TRUE;
-    }
-  else if (_pin[4]._pin == nts::FALSE && _pin[3]._pin == nts::TRUE && _pin[9]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[10]._pin = nts::TRUE;
-    }
-  else if (_pin[4]._pin == nts::TRUE && _pin[3]._pin == nts::TRUE && _pin[9]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[10]._pin = nts::FALSE;
-    }
-  else if (_pin[4]._pin == nts::FALSE && _pin[3]._pin == nts::FALSE && _pin[9]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[10]._pin = nts::TRUE;
-    }
-  else if (_pin[4]._pin == nts::TRUE && _pin[3]._pin == nts::FALSE && _pin[9]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[10]._pin = nts::FALSE;
-    }
-  else if (_pin[4]._pin == nts::FALSE && _pin[3]._pin == nts::TRUE && _pin[9]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[10]._pin = nts::FALSE;
-    }
-  else if (_pin[4]._pin == nts::TRUE && _pin[3]._pin == nts::TRUE && _pin[9]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[10]._pin = nts::TRUE;
-    }
-  else if (_pin[4]._pin == nts::UNDEFINED || _pin[3]._pin == nts::UNDEFINED || _pin[9]._pin == nts::UNDEFINED)
-    {
-      _pin[13]._pin = nts::UNDEFINED;
-      _pin[10]._pin = nts::UNDEFINED;
-    }
+  _pin[10]._pin = tristate_adder(_pin[4]._pin, _pin[3]._pin, _pin[8]._pin);
+  _pin[8]._pin = tristate_adder_sum(_pin[4]._pin, _pin[3]._pin, _pin[8]._pin);
 }
 
-void		Component4008::output_3()
+void		Component4008::output3()
 {
-  if (_pin[2]._pin == nts::FALSE && _pin[1]._pin == nts::FALSE && _pin[10]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[11]._pin = nts::FALSE;
-    }
-  else if (_pin[2]._pin == nts::TRUE && _pin[1]._pin == nts::FALSE && _pin[10]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[11]._pin = nts::TRUE;
-    }
-  else if (_pin[2]._pin == nts::FALSE && _pin[1]._pin == nts::TRUE && _pin[10]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[11]._pin = nts::TRUE;
-    }
-  else if (_pin[2]._pin == nts::TRUE && _pin[1]._pin == nts::TRUE && _pin[10]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[11]._pin = nts::FALSE;
-    }
-  else if (_pin[2]._pin == nts::FALSE && _pin[1]._pin == nts::FALSE && _pin[10]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[11]._pin = nts::TRUE;
-    }
-  else if (_pin[2]._pin == nts::TRUE && _pin[1]._pin == nts::FALSE && _pin[10]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[11]._pin = nts::FALSE;
-    }
-  else if (_pin[2]._pin == nts::FALSE && _pin[1]._pin == nts::TRUE && _pin[10]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[11]._pin = nts::FALSE;
-    }
-  else if (_pin[2]._pin == nts::TRUE && _pin[1]._pin == nts::TRUE && _pin[10]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[11]._pin = nts::TRUE;
-    }
-  else if (_pin[2]._pin == nts::UNDEFINED || _pin[1]._pin == nts::UNDEFINED || _pin[10]._pin == nts::UNDEFINED)
-    {
-      _pin[13]._pin = nts::UNDEFINED;
-      _pin[11]._pin = nts::UNDEFINED;
-    }
+  _pin[11]._pin = tristate_adder(_pin[2]._pin, _pin[1]._pin, _pin[8]._pin);
+  _pin[8]._pin = tristate_adder_sum(_pin[2]._pin, _pin[1]._pin, _pin[8]._pin);
+
 }
 
-void		Component4008::output_4()
+void		Component4008::output4()
 {
-  if (_pin[0]._pin == nts::FALSE && _pin[14]._pin == nts::FALSE && _pin[11]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[12]._pin = nts::FALSE;
-    }
-  else if (_pin[0]._pin == nts::TRUE && _pin[14]._pin == nts::FALSE && _pin[11]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[12]._pin = nts::TRUE;
-    }
-  else if (_pin[0]._pin == nts::FALSE && _pin[14]._pin == nts::TRUE && _pin[11]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[12]._pin = nts::TRUE;
-    }
-  else if (_pin[0]._pin == nts::TRUE && _pin[14]._pin == nts::TRUE && _pin[11]._pin == nts::FALSE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[12]._pin = nts::FALSE;
-    }
-  else if (_pin[0]._pin == nts::FALSE && _pin[14]._pin == nts::FALSE && _pin[11]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::FALSE;
-      _pin[12]._pin = nts::TRUE;
-    }
-  else if (_pin[0]._pin == nts::TRUE && _pin[14]._pin == nts::FALSE && _pin[11]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[12]._pin = nts::FALSE;
-    }
-  else if (_pin[0]._pin == nts::FALSE && _pin[14]._pin == nts::TRUE && _pin[11]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[12]._pin = nts::FALSE;
-    }
-  else if (_pin[0]._pin == nts::TRUE && _pin[14]._pin == nts::TRUE && _pin[11]._pin == nts::TRUE)
-    {
-      _pin[13]._pin = nts::TRUE;
-      _pin[12]._pin = nts::TRUE;
-    }
-  else if (_pin[0]._pin == nts::UNDEFINED || _pin[14]._pin == nts::UNDEFINED || _pin[11]._pin == nts::UNDEFINED)
-    {
-      _pin[13]._pin = nts::UNDEFINED;
-      _pin[12]._pin = nts::UNDEFINED;
-    }
+  _pin[12]._pin = tristate_adder(_pin[0]._pin, _pin[14]._pin, _pin[8]._pin);
+  _pin[13]._pin = tristate_adder_sum(_pin[0]._pin, _pin[14]._pin, _pin[8]._pin);
+
 }
 
 nts::Tristate	Component4008::Compute(size_t pin_num_this)
 {
-  output_1();
-  output_2();
-  output_3();
-  output_4();
-  // output5();
-  // output6();
-  // output7();
-  // output8();
+  nts::Tristate	save = _pin[8]._pin;
+  output1();
+  output2();
+  output3();
+  output4();
+  _pin[8]._pin = save;
   return (_pin[pin_num_this - 1]._pin);
 }

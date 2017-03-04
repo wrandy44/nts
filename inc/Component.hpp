@@ -4,7 +4,7 @@
 ** Login   <debrau_c@epitech.net>
 ** 
 ** Started on  Mon Jan 16 09:33:45 2017 Carl DEBRAUWERE
-// Last update Fri Mar  3 22:01:52 2017 Brunel Axel
+// Last update Sat Mar  4 03:24:38 2017 Brunel Axel
 */
 
 #ifndef _COMPONENT_H_
@@ -68,6 +68,8 @@ protected:
 nts::Tristate operator!(nts::Tristate &a);
 nts::Tristate operator&&(nts::Tristate &a, nts::Tristate &b);
 nts::Tristate operator||(nts::Tristate &a, nts::Tristate &b);
+nts::Tristate tristate_adder_sum(nts::Tristate &a, nts::Tristate &b, nts::Tristate &c);
+nts::Tristate tristate_adder(nts::Tristate &a, nts::Tristate &b, nts::Tristate &c);
 nts::Tristate tristate_nor(nts::Tristate &a, nts::Tristate &b);
 nts::Tristate tristate_xor(nts::Tristate &a, nts::Tristate &b);
 nts::Tristate tristate_nand(nts::Tristate &a, nts::Tristate &b);
